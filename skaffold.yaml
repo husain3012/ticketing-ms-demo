@@ -1,0 +1,15 @@
+apiVersion: skaffold/v4beta4
+kind: Config
+metadata:
+  name: ticketing
+build:
+  artifacts:
+    - image: husain3012/auth
+      context: auth
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - infra/k8s/auth-depl.yaml
+    - infra/k8s/auth-mongo-depl.yaml
+    - infra/k8s/ingress-srv.yaml

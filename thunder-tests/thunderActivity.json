@@ -1,0 +1,16 @@
+[
+  {
+    "_id": "bbc3a853-574a-498a-b92f-69eacfb1302b",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://ticketing.com/api/users/currentuser",
+    "url": "http://ticketing.com/api/users/currentuser",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-04-21T05:37:22.461Z",
+    "modified": "2023-04-21T05:37:22.461Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  }
+]

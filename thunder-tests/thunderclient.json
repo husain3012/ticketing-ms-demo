@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "8033a1ba-ad65-438c-a2e2-26b09bab4db7",
+    "colId": "c1d40336-025c-4992-8f24-e7226bbed755",
+    "containerId": "",
+    "name": "http://ticketing.com/api/users/currentuser",
+    "url": "http://ticketing.com/api/users/signup",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2023-04-21T05:37:32.637Z",
+    "modified": "2023-04-21T06:22:47.503Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\":\"husahihin@gmail.com\",\n  \"password\":\"hus.3434.ain3012\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]

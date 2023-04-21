@@ -1,28 +1,27 @@
 import express, { Request, Response } from 'express';
-import { body, validationResult, FieldValidationError} from 'express-validator';
+import { body} from 'express-validator';
 import { User } from '../models/user';
-import { RequestValidationError, BadRequestError } from '../errors';
+import { BadRequestError } from '../errors';
+import jwt from 'jsonwebtoken';
+
+import { validateRequest } from '../middlewares/validate-request';
+
+const validator = [
+  body('email')
+    .isEmail()
+    .withMessage('Email must be valid'),
+  body('password')
+    .trim()
+    .isLength({ min: 4, max: 20 })
+    .withMessage('Password must be between 4 and 20 characters')
+]
 
 const router = express.Router();
 
 router.post(
-  '/api/users/signup',
-  [
-    body('email')
-      .isEmail()
-      .withMessage('Email must be valid'),
-    body('password')
-      .trim()
-      .isLength({ min: 4, max: 20 })
-      .withMessage('Password must be between 4 and 20 characters')
-  ],
+  '/api/users/signup', validator ,validateRequest, 
   async (req: Request, res: Response) => {
-    const errors = validationResult(req);
-
-    if (!errors.isEmpty()) {
-      throw new RequestValidationError(errors.array() as FieldValidationError[]);
-    }
-
+   
     const { email, password } = req.body;
 
     const existingUser = await User.findOne({ email });
@@ -33,8 +32,17 @@ router.post(
 
     const user = User.build({ email, password });
     await user.save();
+    
+    const token = jwt.sign({
+      id: user.id,
+      email: user.email
+    }, process.env.JWT_KEY!)
 
-    res.status(201).send(user);
+    req.session = {
+      jwt: token
+    };
+
+    res.status(201).json(user);
   }
 );
 

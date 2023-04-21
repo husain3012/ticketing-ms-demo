@@ -3,19 +3,66 @@
     "_id": "8033a1ba-ad65-438c-a2e2-26b09bab4db7",
     "colId": "c1d40336-025c-4992-8f24-e7226bbed755",
     "containerId": "",
-    "name": "http://ticketing.com/api/users/currentuser",
-    "url": "http://ticketing.com/api/users/signup",
+    "name": "signup",
+    "url": "https://ticketing.com/api/users/signup",
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-04-21T05:37:32.637Z",
-    "modified": "2023-04-21T06:22:47.503Z",
+    "modified": "2023-04-21T18:03:10.437Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\":\"husahihin@gmail.com\",\n  \"password\":\"hus.3434.ain3012\"\n}",
+      "raw": "{\n  \"email\":\"husgil@sds.com\",\n  \"password\":\"hus.3sdf34.ain3012\"\n}",
       "form": []
     },
+    "tests": []
+  },
+  {
+    "_id": "01d041e8-2d3f-4444-b083-3e5dcb6c4bb7",
+    "colId": "c1d40336-025c-4992-8f24-e7226bbed755",
+    "containerId": "",
+    "name": "signin",
+    "url": "https://ticketing.com/api/users/signin",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2023-04-21T12:29:43.520Z",
+    "modified": "2023-04-21T12:49:31.602Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\":\"hushisgil@sds.com\",\n  \"password\":\"hus.3sdf34.ain3012\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "48c30db5-445c-411d-afe3-f28dfd3e2f05",
+    "colId": "c1d40336-025c-4992-8f24-e7226bbed755",
+    "containerId": "",
+    "name": "current user",
+    "url": "https://ticketing.com/api/users/currentuser",
+    "method": "GET",
+    "sortNum": 30000,
+    "created": "2023-04-21T12:58:17.182Z",
+    "modified": "2023-04-21T13:01:11.645Z",
+    "headers": [],
+    "params": [],
+    "tests": []
+  },
+  {
+    "_id": "59ffce22-0b52-4bb5-b147-d0da1e2fd342",
+    "colId": "c1d40336-025c-4992-8f24-e7226bbed755",
+    "containerId": "",
+    "name": "signout",
+    "url": "https://ticketing.com/api/users/signout",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2023-04-21T13:04:00.546Z",
+    "modified": "2023-04-21T13:04:11.098Z",
+    "headers": [],
+    "params": [],
     "tests": []
   }
 ]

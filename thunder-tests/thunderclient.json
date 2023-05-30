@@ -4,16 +4,16 @@
     "colId": "c1d40336-025c-4992-8f24-e7226bbed755",
     "containerId": "",
     "name": "signup",
-    "url": "https://ticketing.com/api/users/signup",
+    "url": "http://ticketing.com/api/users/signup",
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-04-21T05:37:32.637Z",
-    "modified": "2023-04-21T18:03:10.437Z",
+    "modified": "2023-04-24T04:59:44.273Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"email\":\"husgil@sds.com\",\n  \"password\":\"hus.3sdf34.ain3012\"\n}",
+      "raw": "{\n  \"email\":\"huasaadadssil@sds.com\",\n  \"password\":\"hus.3sdf34.ain3012\"\n}",
       "form": []
     },
     "tests": []

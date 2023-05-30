@@ -4,12 +4,12 @@ import { currentUser } from '../middlewares/current-user';
 const router = express.Router();
 
 router.get('/api/users/currentuser', currentUser, async (req: Request, res: Response) => {
-  
   res.json({
     currentUser: req.currentUser || null
   })
 
 });
+
 
 
 

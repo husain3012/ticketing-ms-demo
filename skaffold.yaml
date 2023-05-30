@@ -8,8 +8,13 @@ build:
       context: auth
       docker:
         dockerfile: Dockerfile
+    - image: husain3012/client
+      context: client
+      docker:
+        dockerfile: Dockerfile
 manifests:
   rawYaml:
     - infra/k8s/auth-depl.yaml
     - infra/k8s/auth-mongo-depl.yaml
+    - infra/k8s/client-depl.yaml
     - infra/k8s/ingress-srv.yaml
